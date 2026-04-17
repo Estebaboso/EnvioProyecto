@@ -6,16 +6,35 @@ public abstract class Envio {
     private double peso;
     private String destino;
     private Destinatario destinatario;
-    private TipoEnvio tipoEnvio;
+
 
     public Envio(int codigo, double peso, String destino,
-                 Destinatario destinatario, TipoEnvio tipoEnvio) {
+                 Destinatario destinatario) {
         this.codigo = codigo;
         this.peso = peso;
         this.destino = destino;
         this.destinatario = destinatario;
-        this.tipoEnvio = tipoEnvio;
+
     }
+    public abstract double calcularCostoEnvio();
+
+    public double calcularCiudad(String destino){
+        double precio = 0;
+        if(destino.equals("BOGOTA")||destino.equals("MEDELIIN")||destino.equals("CALI")){
+        } precio = 5000;
+
+        return precio;
+    }
+    public double calcularPais(String destino){
+        double precio = 0;
+        double salida = 0;
+        if(destino.equals("MEXICO")||destino.equals("CHILE")||destino.equals("URUGUAY")||destino.equals("BRASIL")){
+        } precio = 15000;
+        salida = 2000;
+
+        return precio + salida;
+    }
+
 
     public int getCodigo() { return codigo; }
     public void setCodigo(int codigo) { this.codigo = codigo; }
@@ -29,6 +48,5 @@ public abstract class Envio {
     public Destinatario getDestinatario() { return destinatario; }
     public void setDestinatario(Destinatario destinatario) { this.destinatario = destinatario; }
 
-    public TipoEnvio getTipoEnvio() { return tipoEnvio; }
-    public void setTipoEnvio(TipoEnvio tipoEnvio) { this.tipoEnvio = tipoEnvio; }
+
 }

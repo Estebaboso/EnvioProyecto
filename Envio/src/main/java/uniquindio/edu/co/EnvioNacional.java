@@ -5,10 +5,14 @@ public class EnvioNacional extends Envio {
     private double costoKg;
 
     public EnvioNacional(int codigo, double peso, String destino,
-                         Destinatario destinatario, TipoEnvio tipoEnvio,
+                         Destinatario destinatario,
                          double costoKg) {
-        super(codigo, peso, destino, destinatario, tipoEnvio);
+        super(codigo, peso, destino, destinatario);
         this.costoKg = costoKg;
+    }
+    public double calcularCostoEnvio(){
+    return (costoKg + calcularCiudad(getDestino()));
+
     }
 
     public double getCostoKg() { return costoKg; }
