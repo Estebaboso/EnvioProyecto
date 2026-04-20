@@ -45,4 +45,28 @@ public abstract class Envio {
     public void setTheDestinarioRemitente(Destinatario theDestinarioRemitente) {
         this.theDestinarioRemitente = theDestinarioRemitente;
     }
+
+    public EstadoEnvio getEstadoEnvio() {
+        return EstadoEnvio;
+    }
+
+    public void setEstadoEnvio(EstadoEnvio estadoEnvio) {
+        EstadoEnvio = estadoEnvio;
+    }
+
+    public Envio getTheCiudadEnvioOrigen() {
+        return theCiudadEnvioOrigen;
+    }
+
+    public void setTheCiudadEnvioOrigen(Envio theCiudadEnvioOrigen) {
+        this.theCiudadEnvioOrigen = theCiudadEnvioOrigen;
+    }
+
+    public Envio getTheCiudadEnvioDestino() {
+        return theCiudadEnvioDestino;
+    }
+
+    public void setTheCiudadEnvioDestino(Envio theCiudadEnvioDestino) {
+        this.theCiudadEnvioDestino = theCiudadEnvioDestino;
+    }
 }

@@ -7,7 +7,9 @@ public class EnvioNacional extends Envio {
     public EnvioNacional(int codigo, double peso, String destino,
                          Destinatario destinatario, TipoEnvio tipoEnvio,
                          double costoKg) {
-        super(codigo, peso, destino, destinatario, tipoEnvio);
+        //aqui da error el EstadoEnvio el cual es el enum que toma la clase Envio
+        //Por cierto ya tiene get y set
+        super(codigo, peso, destino, destinatario, tipoEnvio, EstadoEnvio);
         this.costoKg = costoKg;
     }
 
