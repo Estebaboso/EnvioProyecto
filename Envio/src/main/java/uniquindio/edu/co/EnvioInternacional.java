@@ -6,9 +6,9 @@ public class EnvioInternacional extends Envio {
     private double impuesto;
 
     public EnvioInternacional(int codigo, double peso, String destino,
-                              Destinatario destinatario, TipoEnvio tipoEnvio,
+                              Destinatario destinatario, TipoEnvio tipoEnvio, EstadoEnvio EstadoEnvio,
                               double costoKg, double impuesto) {
-        super(codigo, peso, destino, destinatario, tipoEnvio);
+        super(codigo, peso, destino, destinatario, tipoEnvio, EstadoEnvio);
         this.costoKg = costoKg;
         this.impuesto = impuesto;
     }

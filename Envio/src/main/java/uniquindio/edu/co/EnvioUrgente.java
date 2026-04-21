@@ -5,9 +5,9 @@ public class EnvioUrgente extends Envio {
     private double recargo;
 
     public EnvioUrgente(int codigo, double peso, String destino,
-                        Destinatario destinatario, TipoEnvio tipoEnvio,
+                        Destinatario destinatario, TipoEnvio tipoEnvio, EstadoEnvio EstadoEnvio,
                         double recargo) {
-        super(codigo, peso, destino, destinatario, tipoEnvio);
+        super(codigo, peso, destino, destinatario, tipoEnvio, EstadoEnvio);
         this.recargo = recargo;
     }
 
